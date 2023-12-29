@@ -1,0 +1,97 @@
+header {
+         
+    color:#24305E ;
+    padding-top: 2px;
+    position: fixed;
+    top: 0;
+    left: 5;
+    width: 80%;
+    z-index: 1000; 
+}
+header h1{
+font-size:large;
+}
+
+
+       
+
+body {
+margin: 20px;
+padding: 10px;
+font-family: 'Roboto';
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background-color:  #a8d0e6;
+}
+
+.container {
+width: 900px;
+padding: 40px;
+border: 1px solid #a8d0e6;
+border-radius: 8px;
+background-color: #a8d0e6;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+align-items: center;
+justify-content: center;
+margin-left:20px;
+margin-right: 80px;}
+
+h2 {
+color:#24305E ;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.form-group {
+margin-bottom: 20px;
+}
+
+label {
+display: block;
+margin-bottom: 5px;
+}
+
+.form-control {
+width: 100%;
+padding: 8px;
+box-sizing: border-box;
+}
+
+.btn-primary {
+background-color: #24305E;
+color: #fff;
+padding: 10px 15px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+justify-content: center;
+text-align: center;
+
+}
+.buttonsubmit{
+text-align: center;
+}
+.btn-primary:hover {
+background-color: #0056b3;
+}
+
+.bottom {
+margin-top: 20px;
+text-align: center;
+}
+
+.bottom a {
+color: #007bff;
+text-decoration: none;
+}
+
+.bottom a:hover {
+text-decoration: underline;
+}
+.side-content{
+padding-left: 15%;
+
+}
+

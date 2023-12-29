@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>User Account</title>
+<link rel="stylesheet" href="../static/style/home.css">    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+         
+</head>
+<body>
+    <header>
+        <h1>TaskMate</h1>
+        
+    </header>
+    
+    <div class="welcome">
+        <p>Welcome, {{ session.name }}! Manage your tasks here.</p></div>
+        <div class="pending-tasks">
+            <h2 style="color: #24305E" >Pending Tasks</h2>
+            <table class = "content-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for task in pending_tasks %}
+                        <tr>
+                            <td>{{ task.title }}</td>
+                            <td>{{ task.description }}</td>
+                            <td>{{ task.due_date }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            </div>
+            <div class="image-container">
+                <img src="../static/images/Welcome-bro.png" alt="Image" >
+            </div>  
+    <div class="navigation">
+        <a href="{{ url_for('index') }}"><i class="fa-solid fa-house"></i>  Home</a>
+        <a href="{{ url_for('createtask') }}"><i class="fa fa-plus"></i>  Create Task</a>
+        
+        <a href="{{ url_for('displaytasks') }}"><i class="fa-solid fa-eye"></i> Display</a>
+        <a href="{{ url_for('organizetask') }}"><i class="fa-solid fa-table-columns"></i> Organized Tasks</a>
+        <a href="{{ url_for('logout') }}"><i class="fa-solid fa-right-from-bracket"></i>  Logout</a>
+    </div>
+    
+	
+			
+</body>
+</html>

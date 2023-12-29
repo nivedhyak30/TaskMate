@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style/organise.css">
+</head>
+<body>
+    <div class="header">
+        <a class="logo">TaskMate</a>
+        <div class="header-right">
+          <a href="{{ url_for('home')}}">Home</a>
+          <a   href="{{ url_for('createtask')}}">Add a task</a>
+          <a   href="{{ url_for('displaytasks')}}">All tasks</a>
+          <a href="{{ url_for('logout')}}">Logout</a>
+        </div>
+      </div>
+      {% for category in categories %}
+      <div class="card">
+          <div class="container">
+              <h2>{{ category.name }}</h2>
+              <ul>
+                  {% for task in category.tasks %}
+                      <li>
+                          <h4>{{ task.title }}</h4>
+                          <p>{{ task.description }} & {{ task.due_date }}</p>
+                      </li>
+                  {% endfor %}
+              </ul>
+          </div>
+      </div>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMate</title>
+    <link rel="stylesheet" href="../static/style/index.css"> 
+</head>
+<body>
+    <nav>
+        <a href="{{url_for('login')}}">Login</a>
+        
+        <header>
+            <img src="../static/images/logo1.png" alt="Logo" style="height: 50px; width: 60px; float: left; ">
+            <h1>TaskMate</h1>
+        </header>
+    
+    </nav>
+    <div class="container">
+        <h2>New User? Sign In</h2>
+        <form action="{{ url_for('register') }}" method="post">
+            {% if message is defined and message %}
+                <div class="alert alert-warning">{{ message }}</div>
+            {% endif %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" name="pswd">
+            </div>    
+            <button type="submit" class="btn btn-primary">Register</button>
+            <p class="bottom">Already have an account?  <a class="bottom" href="{{url_for('login')}}"> Login here</a></p>
+        </form>
+    </div>  
+
+
+
+
+
+<div class="side-content">
+    <img src="../static/images/Task-bro (1).png" alt="Image" style="width: 100%;">
+</div>
+
+<footer>
+    &copy; 2023 TaskMate. All rights reserved.
+</footer>
+
+</body>
+</html>
